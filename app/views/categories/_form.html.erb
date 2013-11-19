@@ -1,0 +1,6 @@
+<% submit ||= "create" %>
+<%= form_for @category do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit submit %>
+<% end %>
+

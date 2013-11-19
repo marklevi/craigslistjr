@@ -1,0 +1,8 @@
+<%= @post.title %><br>
+<%= @post.price %><br>
+<%= @post.description %><br>
+<%= @post.reply_email %><br><br>
+<%= link_to "edit post", edit_post_path(@post) %><br>
+<%= link_to "delete post", post_path(@post), method: :delete %>
+
+

@@ -1,0 +1,9 @@
+<%= render 'form' %>  
+
+list of categories
+
+<% @categories.each do |category| %><br>
+  <%= link_to category.name, category %><br>
+<% end %>
+
+

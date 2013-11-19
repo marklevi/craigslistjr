@@ -1,0 +1,9 @@
+
+<%= form_for @post do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_field :description %>
+  <%= f.text_field :price %>
+  <%= f.text_field :reply_email %>
+  <%= f.collection_select :category_id, @categories, :id, :name %>
+  <%= f.submit "Edit post" %>
+<% end %>

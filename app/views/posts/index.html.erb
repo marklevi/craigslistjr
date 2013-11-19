@@ -1,0 +1,23 @@
+<h1>Posts</h1>
+
+<%= form_for @post do |form| %>
+  <%= form.text_field :title %><br>
+  <%= form.text_field :description %><br>
+  <%= form.text_field :price %><br>
+  <%= form.text_field :reply_email %><br>
+  <%= form.collection_select :category_id, @categories, :id, :name %><br>
+  <%= form.submit "create new post" %><br>
+<% end %>
+<hr>
+
+<%#= debug @categories %>
+
+<% @categories.each do |category| %>
+  <% if category.posts.count != 0 %>
+    <h3> <%= link_to category.name, category_path(category) %> </h3>
+    <% category.posts.each do |post| %>
+      <%= link_to post.title, post_path(post) %><br>
+    <% end %>
+  <% end %>
+
+<% end %>
